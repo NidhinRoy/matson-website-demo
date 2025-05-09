@@ -18,29 +18,30 @@ const Index = () => {
             alt="Aswin and Priya" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center text-white">
-          <h1 className="font-script text-5xl md:text-7xl lg:text-8xl mb-4 animate-fade-in">
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl mb-6 animate-fade-in drop-shadow-lg">
             Aswin & Priya
           </h1>
-          <p className="text-2xl md:text-3xl font-serif mb-8 animate-fade-in">
-            We are getting engaged
+          <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+          <p className="text-2xl md:text-4xl font-serif mb-8 animate-fade-in italic">
+            Forever begins here
           </p>
-          <div className="mb-8 animate-fade-in">
-            <p className="uppercase tracking-widest text-xl md:text-2xl font-light">
+          <div className="mb-10 animate-fade-in">
+            <p className="uppercase tracking-widest text-xl md:text-2xl font-light mb-2">
               SAVE OUR DATE
             </p>
-            <p className="text-2xl md:text-3xl font-serif">
-              25.12.2025
+            <p className="text-3xl md:text-4xl font-serif font-light">
+              December 25, 2025
             </p>
           </div>
-          <div className="flex justify-center space-x-4 animate-fade-in">
-            <Link to="/our-story" className="bg-cream text-gold px-6 py-3 rounded-md hover:bg-gold hover:text-cream transition-colors font-medium">
+          <div className="flex justify-center space-x-6 animate-fade-in">
+            <Link to="/our-story" className="bg-cream text-gold px-8 py-4 rounded-md hover:bg-gold hover:text-cream transition-colors font-medium text-lg">
               Our Story
             </Link>
-            <Link to="/events" className="bg-transparent text-white border border-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors font-medium">
+            <Link to="/events" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-md hover:bg-white/20 transition-colors font-medium text-lg">
               Event Details
             </Link>
           </div>
@@ -48,7 +49,7 @@ const Index = () => {
         
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white">
           <a href="#welcome" className="flex flex-col items-center animate-bounce">
-            <span className="mb-2">Scroll Down</span>
+            <span className="mb-2 text-sm uppercase tracking-wider">Discover More</span>
             <svg 
               className="w-6 h-6" 
               fill="none" 
