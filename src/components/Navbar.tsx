@@ -41,7 +41,7 @@ export default function Navbar() {
       "fixed top-0 left-0 w-full z-50 transition-all duration-300",
       scrolled ? "bg-cream/90 backdrop-blur-md shadow-md py-2" : "py-4"
     )}>
-      <div className="container mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between px-4">
+      <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="font-script text-2xl md:text-3xl text-gold">
             Aswin & Priya
@@ -65,12 +65,36 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
+        
+        {/* Mobile navigation menu - vertical list */}
         <div
           className={cn(
-            "flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 mt-4 lg:mt-0",
-            isOpen ? "block" : "hidden lg:flex"
+            "lg:hidden overflow-hidden transition-all duration-300",
+            isOpen ? "max-h-screen py-4" : "max-h-0"
           )}
         >
+          <div className="flex flex-col space-y-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={cn(
+                  "nav-link block text-center py-2 border-b border-gold/20",
+                  currentPath === item.path && "active"
+                )}
+                onClick={() => {
+                  setIsOpen(false);
+                  setCurrentPath(item.path);
+                }}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+        
+        {/* Desktop navigation - horizontal list */}
+        <div className="hidden lg:flex lg:justify-center lg:space-x-8 lg:mt-0">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -80,7 +104,6 @@ export default function Navbar() {
                 currentPath === item.path && "active"
               )}
               onClick={() => {
-                setIsOpen(false);
                 setCurrentPath(item.path);
               }}
             >
