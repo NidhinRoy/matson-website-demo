@@ -1,10 +1,14 @@
 
 import React from 'react';
 import PageHeader from '@/components/PageHeader';
+import VideoPlayer from '@/components/VideoPlayer';
 import { Play } from 'lucide-react';
 
 const WatchLive = () => {
   const liveImage = '/lovable-uploads/fbae7968-2e39-4996-bf30-c426af6c405e.png';
+  
+  // Sample video - replace with your actual video URL when available
+  const videoUrl = undefined; // Set to your video URL when you have one
   
   return (
     <div className="pt-24 pb-16">
@@ -18,18 +22,12 @@ const WatchLive = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg mb-8">
-            <img 
-              src={liveImage}
-              alt="Live Stream Thumbnail" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-gold transition-colors">
-                <Play size={36} className="text-gold hover:text-white ml-1" />
-              </div>
-            </div>
-          </div>
+          <VideoPlayer 
+            videoSrc={videoUrl}
+            thumbnailSrc={liveImage}
+            title="Wedding Live Stream"
+            className="mb-8"
+          />
           
           <div className="bg-white p-8 rounded-lg shadow-md border border-gold/20 mb-12">
             <h3 className="text-2xl font-serif text-gold mb-4">Live Stream Details</h3>
