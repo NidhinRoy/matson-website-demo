@@ -24,5 +24,5 @@ export const images = {
   family: '/lovable-uploads/0bb998e8-b0e9-442b-80e0-aea5f0990ccf.png',
   
   // Video Thumbnails
-  videoThumb: 'NidhinRoy/matson-website-demo/public/lovable-uploads/VID-20250428-WA0044.mp4',
+  videoThumb: '/lovable-uploads/fbae7968-2e39-4996-bf30-c426af6c405e.png',
 };
