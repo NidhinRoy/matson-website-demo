@@ -42,7 +42,7 @@ const Gallery = () => {
         
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-6">
-            More photos will be added after our engagement ceremony on December 25th, 2024
+            More photos will be added after our engagement ceremony on December 25th, 2025
           </p>
         </div>
       </div>

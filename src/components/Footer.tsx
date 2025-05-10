@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; 2025 Aswin & Priya. All rights reserved.</p>
+          <p>&copy; 2025 Matson . All rights reserved.</p>
         </div>
       </div>
     </footer>
