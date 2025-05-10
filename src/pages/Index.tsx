@@ -5,8 +5,8 @@ import { Play } from 'lucide-react';
 import CountdownTimer from '@/components/CountdownTimer';
 
 const Index = () => {
-  // Placeholder image paths - use the uploaded ones
-  const heroImage = '/lovable-uploads/58c0768d-1d9f-40c5-b639-edb15ffa83c6.png';
+  // Updated hero image path to use the new uploaded image
+  const heroImage = '/lovable-uploads/c4954fbf-33d2-4b38-923e-9a8da1cfa72c.png';
   
   return (
     <div className="min-h-screen">

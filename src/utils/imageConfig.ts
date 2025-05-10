@@ -2,7 +2,7 @@
 // Image paths for easy reference and maintenance
 export const images = {
   // Home/Hero Images
-  hero: '/lovable-uploads/58c0768d-1d9f-40c5-b639-edb15ffa83c6.png',
+  hero: '/lovable-uploads/c4954fbf-33d2-4b38-923e-9a8da1cfa72c.png',
   
   // Couple Images
   couple1: '/lovable-uploads/b62dea22-612a-4c7a-91b2-08d1c51e5af9.png',
