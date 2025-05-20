@@ -2,6 +2,7 @@
 import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import GalleryGrid from '@/components/GalleryGrid';
+import { motion } from 'framer-motion';
 
 const Gallery = () => {
   // New images from the gallery uploads
@@ -27,24 +28,52 @@ const Gallery = () => {
     '/lovable-uploads/5575e6c4-f4a7-4c18-be6d-136ec5d8d6de.png',
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
-        <PageHeader title="Our Journey Together" />
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="backdrop-blur-sm bg-white/20 p-8 rounded-xl mb-12 shadow-lg"
+        >
+          <PageHeader title="Our Journey Together" />
+          
+          <div className="mb-12 text-center max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground">
+              Browse through our favorite memories - from our first dates to our engagement celebrations in traditional attire.
+            </p>
+          </div>
+        </motion.div>
         
-        <div className="mb-12 text-center max-w-2xl mx-auto">
-          <p className="text-lg text-muted-foreground">
-            Browse through our favorite memories - from our first dates to our engagement celebrations in traditional attire.
-          </p>
-        </div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <GalleryGrid images={images} />
+        </motion.div>
         
-        <GalleryGrid images={images} />
-        
-        <div className="mt-12 text-center">
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
           <p className="text-muted-foreground mb-6">
             More photos will be added after our engagement ceremony on December 25th, 2025
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
